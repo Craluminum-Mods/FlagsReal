@@ -1,0 +1,14 @@
+[
+  {
+    "ingredientPattern": "B_W,G_V",
+    "ingredients": {
+      "B": { "type": "item", "code": "clothp-24-black", "quantity": 6 },
+      "G": { "type": "item", "code": "clothp-24-gray", "quantity": 6 },
+      "W": { "type": "item", "code": "clothp-24-white", "quantity": 6 },
+      "V": { "type": "item", "code": "clothp-24-purple", "quantity": 6 }
+    },
+    "width": 3,
+    "height": 2,
+    "output": { "type": "block", "code": "flag-pride-asexual-east" }
+  }
+]

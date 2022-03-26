@@ -1,0 +1,10 @@
+{
+  "__comment": "List of organization flags",
+  "code": "organization",
+  "variants": [
+    { "code": "eu" },
+    { "code": "nato" },
+    { "code": "un" },
+    { "code": "usfws" }
+  ]
+}

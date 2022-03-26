@@ -1,0 +1,13 @@
+[
+  {
+    "ingredientPattern": "RRR,EWE,RRR",
+    "ingredients": {
+      "W": { "type": "item", "code": "clothp-24-white", "quantity": 6 },
+      "R": { "type": "item", "code": "clothp-24-red", "quantity": 2 },
+      "E": { "type": "item", "code": "clothp-24-red", "quantity": 3 }
+    },
+    "width": 3,
+    "height": 3,
+    "output": { "type": "block", "code": "flag-country-hk-east" }
+  }
+]

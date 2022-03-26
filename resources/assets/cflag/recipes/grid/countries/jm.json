@@ -1,0 +1,14 @@
+[
+  {
+    "ingredientPattern": "YGY,BJB,YGY",
+    "ingredients": {
+      "Y": { "type": "item", "code": "clothp-24-yellow" },
+      "J": { "type": "item", "code": "clothp-24-yellow", "quantity": 4 },
+      "G": { "type": "item", "code": "clothp-24-green", "quantity": 4 },
+      "B": { "type": "item", "code": "clothp-24-black", "quantity": 4 }
+    },
+    "width": 3,
+    "height": 3,
+    "output": { "type": "block", "code": "flag-country-jm-east" }
+  }
+]

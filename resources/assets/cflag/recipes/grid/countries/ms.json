@@ -1,0 +1,19 @@
+[
+  {
+    "ingredientPattern": "WBD,RLG,SCY",
+    "ingredients": {
+      "B": { "type": "item", "code": "clothp-24-blue", "quantity": 2 },
+      "S": { "type": "item", "code": "clothp-24-blue", "quantity": 13 },
+      "W": { "type": "item", "code": "clothp-24-white", "quantity": 2 },
+      "L": { "type": "item", "code": "clothp-24-white" },
+      "R": { "type": "item", "code": "clothp-24-red", "quantity": 2 },
+      "G": { "type": "item", "code": "clothp-24-green" },
+      "D": { "type": "item", "code": "clothp-24-black" },
+      "Y": { "type": "item", "code": "clothp-24-yellow" },
+      "C": { "type": "item", "code": "clothp-24-brown" }
+    },
+    "width": 3,
+    "height": 3,
+    "output": { "type": "block", "code": "flag-country-ms-east" }
+  }
+]

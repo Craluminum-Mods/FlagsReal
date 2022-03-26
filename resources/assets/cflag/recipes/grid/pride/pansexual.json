@@ -1,0 +1,13 @@
+[
+  {
+    "ingredientPattern": "PP,YY,BB",
+    "ingredients": {
+      "P": { "type": "item", "code": "clothp-24-pink", "quantity": 4 },
+      "Y": { "type": "item", "code": "clothp-24-yellow", "quantity": 4 },
+      "B": { "type": "item", "code": "clothp-24-blue", "quantity": 4 }
+    },
+    "width": 2,
+    "height": 3,
+    "output": { "type": "block", "code": "flag-pride-pansexual-east" }
+  }
+]

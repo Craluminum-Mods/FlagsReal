@@ -1,0 +1,15 @@
+[
+  {
+    "ingredientPattern": "YCY,BGB,RRR",
+    "ingredients": {
+      "Y": { "type": "item", "code": "clothp-24-yellow", "quantity": 6 },
+      "R": { "type": "item", "code": "clothp-24-red", "quantity": 2 },
+      "B": { "type": "item", "code": "clothp-24-blue", "quantity": 2 },
+      "G": { "type": "item", "code": "clothp-24-green" },
+      "C": { "type": "item", "code": "clothp-24-brown" }
+    },
+    "width": 3,
+    "height": 3,
+    "output": { "type": "block", "code": "flag-country-ec-east" }
+  }
+]

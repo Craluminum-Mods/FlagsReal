@@ -1,0 +1,16 @@
+[
+  {
+    "ingredientPattern": "YLG,YWJ,YLR",
+    "ingredients": {
+      "Y": { "type": "item", "code": "clothp-24-yellow", "quantity": 3 },
+      "J": { "type": "item", "code": "clothp-24-yellow" },
+      "W": { "type": "item", "code": "clothp-24-white", "quantity": 4 },
+      "L": { "type": "item", "code": "clothp-24-white", "quantity": 3 },
+      "G": { "type": "item", "code": "clothp-24-gray", "quantity": 2 },
+      "R": { "type": "item", "code": "clothp-24-red", "quantity": 2 }
+    },
+    "width": 3,
+    "height": 3,
+    "output": { "type": "block", "code": "flag-country-va-east" }
+  }
+]

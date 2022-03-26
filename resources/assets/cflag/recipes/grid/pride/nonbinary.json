@@ -1,0 +1,14 @@
+[
+  {
+    "ingredientPattern": "Y_V,W_B",
+    "ingredients": {
+      "Y": { "type": "item", "code": "clothp-24-yellow", "quantity": 6 },
+      "W": { "type": "item", "code": "clothp-24-white", "quantity": 6 },
+      "V": { "type": "item", "code": "clothp-24-purple", "quantity": 6 },
+      "B": { "type": "item", "code": "clothp-24-black", "quantity": 6 }
+    },
+    "width": 3,
+    "height": 2,
+    "output": { "type": "block", "code": "flag-pride-nonbinary-east" }
+  }
+]

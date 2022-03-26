@@ -1,0 +1,14 @@
+[
+  {
+    "ingredientPattern": "ZZ,WW,GB",
+    "ingredients": {
+      "Z": { "type": "item", "code": "clothp-20-green", "quantity": 4 },
+      "W": { "type": "item", "code": "clothp-20-white", "quantity": 2 },
+      "G": { "type": "item", "code": "clothp-20-gray", "quantity": 4 },
+      "B": { "type": "item", "code": "clothp-20-black", "quantity": 4 }
+    },
+    "width": 2,
+    "height": 3,
+    "output": { "type": "block", "code": "flag-pride-aromantic-east" }
+  }
+]

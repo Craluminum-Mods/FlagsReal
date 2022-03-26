@@ -1,0 +1,15 @@
+[
+  {
+    "ingredientPattern": "BWK,RWK,RLL",
+    "ingredients": {
+      "R": { "type": "item", "code": "clothp-24-red", "quantity": 3 },
+      "K": { "type": "item", "code": "clothp-24-red", "quantity": 2 },
+      "W": { "type": "item", "code": "clothp-24-white", "quantity": 3 },
+      "L": { "type": "item", "code": "clothp-24-white", "quantity": 2 },
+      "B": { "type": "item", "code": "clothp-24-blue", "quantity": 4 }
+    },
+    "width": 3,
+    "height": 3,
+    "output": { "type": "block", "code": "flag-country-lr-east" }
+  }
+]

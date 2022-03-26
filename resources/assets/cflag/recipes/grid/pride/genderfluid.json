@@ -1,0 +1,15 @@
+[
+  {
+    "ingredientPattern": "PVD,W_S",
+    "ingredients": {
+      "P": { "type": "item", "code": "clothp-20-pink", "quantity": 4 },
+      "W": { "type": "item", "code": "clothp-20-white", "quantity": 4 },
+      "V": { "type": "item", "code": "clothp-20-purple", "quantity": 4 },
+      "D": { "type": "item", "code": "clothp-20-black", "quantity": 4 },
+      "S": { "type": "item", "code": "clothp-20-blue", "quantity": 4 }
+    },
+    "width": 3,
+    "height": 2,
+    "output": { "type": "block", "code": "flag-pride-genderfluid-east" }
+  }
+]

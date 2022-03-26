@@ -1,0 +1,13 @@
+[
+  {
+    "ingredientPattern": "WW_,__R,GG_",
+    "ingredients": {
+      "W": { "type": "item", "code": "clothp-24-white", "quantity": 4 },
+      "G": { "type": "item", "code": "clothp-24-green", "quantity": 4 },
+      "R": { "type": "item", "code": "clothp-24-red", "quantity": 8 }
+    },
+    "width": 3,
+    "height": 3,
+    "output": { "type": "block", "code": "flag-country-gb_wls-east" }
+  }
+]

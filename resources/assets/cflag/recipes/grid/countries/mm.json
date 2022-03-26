@@ -1,0 +1,14 @@
+[
+  {
+    "ingredientPattern": "YYY,GWG,RRR",
+    "ingredients": {
+      "Y": { "type": "item", "code": "clothp-24-yellow", "quantity": 2 },
+      "G": { "type": "item", "code": "clothp-24-green", "quantity": 3 },
+      "R": { "type": "item", "code": "clothp-24-red", "quantity": 2 },
+      "W": { "type": "item", "code": "clothp-24-white", "quantity": 6 }
+    },
+    "width": 3,
+    "height": 3,
+    "output": { "type": "block", "code": "flag-country-mm-east" }
+  }
+]

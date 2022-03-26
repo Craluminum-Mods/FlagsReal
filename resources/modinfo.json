@@ -1,0 +1,11 @@
+{
+  "type": "content",
+  "modid": "flagsreal",
+  "name": "Flags - Real",
+  "description": "Craftable flags of countries, organizations, LGBT etc.",
+  "authors": ["Craluminum2413"],
+  "version": "1.1.0",
+  "dependencies": {
+    "flagsmaterials": "1.1.0"
+  }
+}

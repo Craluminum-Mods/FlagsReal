@@ -1,0 +1,14 @@
+[
+  {
+    "ingredientPattern": "RGG,RWW,RBB",
+    "ingredients": {
+      "R": { "type": "item", "code": "clothp-24-red", "quantity": 2 },
+      "G": { "type": "item", "code": "clothp-24-green", "quantity": 3 },
+      "W": { "type": "item", "code": "clothp-24-white", "quantity": 3 },
+      "B": { "type": "item", "code": "clothp-24-black", "quantity": 3 }
+    },
+    "width": 3,
+    "height": 3,
+    "output": { "type": "block", "code": "flag-country-ae-east" }
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "ingredientPattern": "RBR,RRR,BRB",
+    "ingredients": {
+      "R": { "type": "item", "code": "clothp-24-red", "quantity": 3 },
+      "B": { "type": "item", "code": "clothp-24-black", "quantity": 2 }
+    },
+    "width": 3,
+    "height": 3,
+    "output": { "type": "block", "code": "flag-country-al-east" }
+  }
+]

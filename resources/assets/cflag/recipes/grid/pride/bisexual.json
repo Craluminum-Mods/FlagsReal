@@ -1,0 +1,13 @@
+[
+  {
+    "ingredientPattern": "PP,VV,BB",
+    "ingredients": {
+      "P": { "type": "item", "code": "clothp-20-pink", "quantity": 4 },
+      "B": { "type": "item", "code": "clothp-20-blue", "quantity": 4 },
+      "V": { "type": "item", "code": "clothp-20-purple", "quantity": 2 }
+    },
+    "width": 2,
+    "height": 3,
+    "output": { "type": "block", "code": "flag-pride-bisexual-east" }
+  }
+]

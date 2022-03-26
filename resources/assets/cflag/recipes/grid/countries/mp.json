@@ -1,0 +1,16 @@
+[
+  {
+    "ingredientPattern": "BRB,PWG,BOB",
+    "ingredients": {
+      "B": { "type": "item", "code": "clothp-24-blue", "quantity": 4 },
+      "W": { "type": "item", "code": "clothp-24-white", "quantity": 4 },
+      "P": { "type": "item", "code": "clothp-24-pink" },
+      "O": { "type": "item", "code": "clothp-24-orange" },
+      "R": { "type": "item", "code": "clothp-24-red" },
+      "G": { "type": "item", "code": "clothp-24-green" }
+    },
+    "width": 3,
+    "height": 3,
+    "output": { "type": "block", "code": "flag-country-mp-east" }
+  }
+]

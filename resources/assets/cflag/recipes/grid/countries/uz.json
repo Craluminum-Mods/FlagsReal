@@ -1,0 +1,16 @@
+[
+  {
+    "ingredientPattern": "LBB,RWR,GZZ",
+    "ingredients": {
+      "W": { "type": "item", "code": "clothp-24-white", "quantity": 7 },
+      "L": { "type": "item", "code": "clothp-24-white", "quantity": 2 },
+      "G": { "type": "item", "code": "clothp-24-green", "quantity": 3 },
+      "Z": { "type": "item", "code": "clothp-24-green", "quantity": 2 },
+      "B": { "type": "item", "code": "clothp-24-blue", "quantity": 3 },
+      "R": { "type": "item", "code": "clothp-24-red" }
+    },
+    "width": 3,
+    "height": 3,
+    "output": { "type": "block", "code": "flag-country-uz-east" }
+  }
+]

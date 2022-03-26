@@ -1,0 +1,17 @@
+[
+  {
+    "ingredientPattern": "RPG,YWY,RBK",
+    "ingredients": {
+      "R": { "type": "item", "code": "clothp-24-red", "quantity": 6 },
+      "K": { "type": "item", "code": "clothp-24-red", "quantity": 2 },
+      "Y": { "type": "item", "code": "clothp-24-yellow", "quantity": 3 },
+      "W": { "type": "item", "code": "clothp-24-white" },
+      "B": { "type": "item", "code": "clothp-24-blue" },
+      "P": { "type": "item", "code": "clothp-24-pink" },
+      "G": { "type": "item", "code": "clothp-24-green" }
+    },
+    "width": 3,
+    "height": 3,
+    "output": { "type": "block", "code": "flag-country-es-east" }
+  }
+]

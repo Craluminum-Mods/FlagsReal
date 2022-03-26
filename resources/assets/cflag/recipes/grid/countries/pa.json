@@ -1,0 +1,15 @@
+[
+  {
+    "ingredientPattern": "SWR,WWW,BWK",
+    "ingredients": {
+      "W": { "type": "item", "code": "clothp-24-white", "quantity": 2 },
+      "R": { "type": "item", "code": "clothp-24-red", "quantity": 5 },
+      "K": { "type": "item", "code": "clothp-24-red", "quantity": 2 },
+      "B": { "type": "item", "code": "clothp-24-blue", "quantity": 5 },
+      "S": { "type": "item", "code": "clothp-24-blue", "quantity": 2 }
+    },
+    "width": 3,
+    "height": 3,
+    "output": { "type": "block", "code": "flag-country-pa-east" }
+  }
+]

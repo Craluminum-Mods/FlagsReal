@@ -1,0 +1,17 @@
+{
+  "__comment": "List of pride flags",
+  "code": "pride",
+  "variants": [
+    { "code": "agender" },
+    { "code": "aromantic" },
+    { "code": "asexual" },
+    { "code": "bisexual" },
+    { "code": "genderfluid" },
+    { "code": "genderqueer" },
+    { "code": "nonbinary" },
+    { "code": "pansexual" },
+    { "code": "polysexual" },
+    { "code": "rainbow" },
+    { "code": "transgender" }
+  ]
+}

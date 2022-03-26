@@ -1,0 +1,13 @@
+[
+  {
+    "ingredientPattern": "GWG,GZG,GWG",
+    "ingredients": {
+      "G": { "type": "item", "code": "clothp-24-green", "quantity": 2 },
+      "Z": { "type": "item", "code": "clothp-24-green", "quantity": 4 },
+      "W": { "type": "item", "code": "clothp-24-white", "quantity": 4 }
+    },
+    "width": 3,
+    "height": 3,
+    "output": { "type": "block", "code": "flag-country-nf-east" }
+  }
+]

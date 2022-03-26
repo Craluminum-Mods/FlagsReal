@@ -1,0 +1,14 @@
+[
+  {
+    "ingredientPattern": "KLR,WWR",
+    "ingredients": {
+      "R": { "type": "item", "code": "clothp-24-red", "quantity": 6 },
+      "K": { "type": "item", "code": "clothp-24-red" },
+      "W": { "type": "item", "code": "clothp-24-white", "quantity": 4 },
+      "L": { "type": "item", "code": "clothp-24-white", "quantity": 3 }
+    },
+    "width": 3,
+    "height": 2,
+    "output": { "type": "block", "code": "flag-country-mt-east" }
+  }
+]

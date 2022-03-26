@@ -1,0 +1,13 @@
+[
+  {
+    "ingredientPattern": "BBB,EYE,BBB",
+    "ingredients": {
+      "B": { "type": "item", "code": "clothp-24-blue", "quantity": 2 },
+      "Y": { "type": "item", "code": "clothp-24-yellow", "quantity": 6 },
+      "E": { "type": "item", "code": "clothp-24-blue", "quantity": 3 }
+    },
+    "width": 3,
+    "height": 3,
+    "output": { "type": "block", "code": "flag-country-pw-east" }
+  }
+]

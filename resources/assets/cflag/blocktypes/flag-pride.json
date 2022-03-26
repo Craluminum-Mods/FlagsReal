@@ -1,0 +1,235 @@
+{
+  "code": "flag",
+  "blockmaterial": "Cloth",
+  "attributes": { "handbook": { "groupBy": ["flag-{type}-*"] } },
+  "creativeinventory": { "cflag": ["*-east"] },
+  "variantGroups": [
+    { "code": "type", "states": ["pride"] },
+    { "code": "pride", "loadFromProperties": "cflag:pride" },
+    { "code": "side", "loadFromProperties": "abstract/horizontalorientation" }
+  ],
+  "behaviors": [{ "name": "BlockFlag" }],
+  "heldLeftTpIdleAnimation": "holdinglanternlefthand",
+  "heldRightTpIdleAnimation": "holdinglanternrighthand",
+  "maxStackSize": 8,
+  "storageFlags": 257,
+  "shape": {
+    "baseByType": {
+      "@.*-(aromantic|agender|bisexual|genderfluid|transgender)-.*": "block/flag-hor-5color",
+      "@.*-(asexual|nonbinary)-.*": "block/flag-hor-4color",
+      "@.*-(genderqueer|polysexual|pansexual)-.*": "block/flag-hor-3color",
+      "@.*-(rainbow)-.*": "block/flag-hor-6color"
+    },
+    "rotateYByType": {
+      "*-north": 90,
+      "*-south": -90,
+      "*-west": 180
+    }
+  },
+  "textures": {
+    "pole": { "base": "game:block/liquid/dye/gray" },
+    "hor3-1ByType": {
+      "*-genderqueer-*": { "base": "game:block/cloth/linen/pink" },
+      "*-pansexual-*": { "base": "game:block/cloth/linen/pink" },
+      "*-polysexual-*": { "base": "game:block/cloth/linen/pink" }
+    },
+    "hor3-2ByType": {
+      "*-genderqueer-*": { "base": "game:block/cloth/linen/white" },
+      "*-pansexual-*": { "base": "game:block/cloth/linen/yellow" },
+      "*-polysexual-*": { "base": "game:block/cloth/linen/green" }
+    },
+    "hor3-3ByType": {
+      "*-genderqueer-*": { "base": "game:block/cloth/linen/green" },
+      "*-pansexual-*": { "base": "extra/lightblue" },
+      "*-polysexual-*": { "base": "game:block/cloth/linen/blue" }
+    },
+    "hor4-1ByType": {
+      "*-asexual-*": { "base": "game:block/cloth/linen/black" },
+      "*-nonbinary-*": { "base": "game:block/cloth/linen/yellow" }
+    },
+    "hor4-2ByType": {
+      "*-asexual-*": { "base": "game:block/cloth/linen/gray" },
+      "*-nonbinary-*": { "base": "game:block/cloth/linen/white" }
+    },
+    "hor4-3ByType": {
+      "*-asexual-*": { "base": "game:block/cloth/linen/white" },
+      "*-nonbinary-*": { "base": "game:block/cloth/linen/purple" }
+    },
+    "hor4-4ByType": {
+      "*-asexual-*": { "base": "game:block/cloth/linen/purple" },
+      "*-nonbinary-*": { "base": "game:block/cloth/linen/black" }
+    },
+    "hor5-1ByType": {
+      "*-agender-*": { "base": "game:block/cloth/linen/gray" },
+      "*-aromantic-*": { "base": "game:block/cloth/linen/green" },
+      "*-bisexual-*": { "base": "game:block/cloth/linen/pink" },
+      "*-genderfluid-*": { "base": "game:block/cloth/linen/pink" },
+      "*-transgender-*": { "base": "extra/lightblue" }
+    },
+    "hor5-2ByType": {
+      "*-agender-*": { "base": "game:block/cloth/linen/white" },
+      "*-aromantic-*": { "base": "extra/lightgreen" },
+      "*-bisexual-*": { "base": "game:block/cloth/linen/pink" },
+      "*-genderfluid-*": { "base": "game:block/cloth/linen/white" },
+      "*-transgender-*": { "base": "game:block/cloth/linen/pink" }
+    },
+    "hor5-3ByType": {
+      "*-agender-*": { "base": "extra/lightgreen" },
+      "*-aromantic-*": { "base": "game:block/cloth/linen/white" },
+      "*-bisexual-*": { "base": "game:block/cloth/linen/purple" },
+      "*-genderfluid-*": { "base": "game:block/cloth/linen/purple" },
+      "*-transgender-*": { "base": "game:block/cloth/linen/white" }
+    },
+    "hor5-4ByType": {
+      "*-agender-*": { "base": "game:block/cloth/linen/white" },
+      "*-aromantic-*": { "base": "game:block/cloth/linen/gray" },
+      "*-bisexual-*": { "base": "extra/darkblue" },
+      "*-genderfluid-*": { "base": "game:block/cloth/linen/black" },
+      "*-transgender-*": { "base": "game:block/cloth/linen/pink" }
+    },
+    "hor5-5ByType": {
+      "*-agender-*": { "base": "game:block/cloth/linen/gray" },
+      "*-aromantic-*": { "base": "game:block/cloth/linen/black" },
+      "*-bisexual-*": { "base": "extra/darkblue" },
+      "*-genderfluid-*": { "base": "extra/darkblue" },
+      "*-transgender-*": { "base": "extra/lightblue" }
+    },
+    "hor6-1ByType": {
+      "*-rainbow-*": { "base": "game:block/cloth/linen/red" }
+    },
+    "hor6-2ByType": {
+      "*-rainbow-*": { "base": "game:block/cloth/linen/orange" }
+    },
+    "hor6-3ByType": {
+      "*-rainbow-*": { "base": "game:block/cloth/linen/yellow" }
+    },
+    "hor6-4ByType": {
+      "*-rainbow-*": { "base": "game:block/cloth/linen/green" }
+    },
+    "hor6-5ByType": {
+      "*-rainbow-*": { "base": "game:block/cloth/linen/blue" }
+    },
+    "hor6-6ByType": {
+      "*-rainbow-*": { "base": "game:block/cloth/linen/purple" }
+    }
+  },
+  "collisionBox": null,
+  "selectionBox": {
+    "x1": 0.4375,
+    "y1": 0,
+    "z1": 0,
+    "x2": 0.5625,
+    "y2": 1,
+    "z2": 1,
+    "rotateYByType": { "@.*-(east|west)": 90 }
+  },
+  "sounds": {
+    "place": "game:block/cloth",
+    "break": "game:block/cloth",
+    "hit": "game:block/cloth",
+    "walk": "game:walk/cloth"
+  },
+  "lightAbsorption": 0,
+  "resistance": 0.5,
+  "sideopaque": { "all": false },
+  "sidesolid": { "all": false },
+  "tpOffHandTransform": {
+    "translation": { "x": -1.4, "y": -1, "z": -0.93 },
+    "rotation": { "x": 0, "y": 0, "z": -90 },
+    "scale": 0.5
+  },
+  "tpHandTransform": {
+    "translation": { "x": -1.55, "y": -1, "z": -1 },
+    "rotation": { "x": 0, "y": 0, "z": -90 },
+    "scale": 0.5
+  },
+  "fpHandTransform": {
+    "rotation": { "x": 0, "y": 45, "z": 0 }
+  },
+  "guiTransform": {
+    "translation": { "x": -8, "y": 3, "z": 0 },
+    "scale": 1.4
+  },
+  "groundTransform": {
+    "translation": { "x": 0, "y": 0, "z": 0 },
+    "rotation": { "x": 0, "y": -45, "z": 0 },
+    "origin": { "x": 0.5, "y": 0, "z": 0.5 },
+    "scale": 6
+  },
+  "dropsByType": {
+    "*-agender-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-20-gray", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-20-white", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-20-green", "quantity": { "avg": 4 } }
+    ],
+    "*-aromantic-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-20-green", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-20-white", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-20-gray", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-20-black", "quantity": { "avg": 4 } }
+    ],
+    "*-asexual-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-black", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-gray", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-purple", "quantity": { "avg": 6 } }
+    ],
+    "*-bisexual-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-20-pink", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-20-blue", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-20-purple", "quantity": { "avg": 4 } }
+    ],
+    "*-genderfluid-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-20-pink", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-20-white", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-20-purple", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-20-black", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-20-blue", "quantity": { "avg": 4 } }
+    ],
+    "*-genderqueer-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-pink", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 8 } }
+    ],
+    "*-nonbinary-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-purple", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-black", "quantity": { "avg": 6 } }
+    ],
+    "*-pansexual-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-pink", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 8 } }
+    ],
+    "*-polysexual-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-pink", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 8 } }
+    ],
+    "*-rainbow-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-24-orange", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-24-purple", "quantity": { "avg": 4 } }
+    ],
+    "*-transgender-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-20-blue", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-20-pink", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-20-white", "quantity": { "avg": 4 } }
+    ]
+  }
+}

@@ -1,0 +1,1593 @@
+{
+  "code": "flag",
+  "blockmaterial": "Cloth",
+  "attributes": { "handbook": { "groupBy": ["flag-{type}-*"] } },
+  "creativeinventory": { "cflag": ["*-east"] },
+  "variantGroups": [
+    { "code": "type", "states": ["country"] },
+    { "code": "country", "loadFromPropertiesCombine": ["cflag:country", "cflag:organization"] },
+    { "code": "side", "loadFromProperties": "abstract/horizontalorientation" }
+  ],
+  "behaviors": [{ "name": "BlockFlag" }],
+  "heldLeftTpIdleAnimation": "holdinglanternlefthand",
+  "heldRightTpIdleAnimation": "holdinglanternrighthand",
+  "maxStackSize": 8,
+  "storageFlags": 257,
+  "shape": {
+    "baseByType": {
+      "@.*-(ad|ao|gb_wls|ca_qc|ge|kh|hn|il|al|dk|fo|tn|un|hk|eg|qa|tz|gm|gl|bb|gh|gr|dj|pf|ke|za|kr|jp|tr|tw|dz|mt|mm|cl|in|cz|cf|cg|cm|vn|ax|ma|cw|cn|ag|aw|cy|zm|uy|pk|es|iq|is|mr|pa|rs|cd|pe|br|no|sg|sn|bw|pg|bf|pr|gg|vc|kn|na|rw|tf|sz|so|sy|sr|ve|wf|bh|sk|sa|tm|bt|mz|ug|la|mo|mv|bo|do|sx|sm|bq|gq|usfws|mw|ls|gf|vi|pm|nato|eu)-.*": "block/flag-15x12",
+      "@.*-(ai|ca|kz|ps|aq|jm|tl|kp|ki|tk|to|im|az|uz|py|us|ir|bn|gw|bs|cu|ph|cc|cx|my|tj|mn|li|hr|mx|md|gb|mk|sc|kw|lc|jo|ba|by|nr|st|et|nf|ws|au|ck|eh|ae|sd|ss|sb|nu|nz|si|lk|zw|tv|vu|er|dm|pn|mp|om|yu_old|mh|ly|lr|bm|tc|ky|as|gu|gi|fm|vg|ms|sh_hl|fk|me|fj)-.*": "block/flag-16x8",
+      "@.*-(ar|bd|tt|fl|ht|tg|gt|sv|km|ec|pt|gy|pw|bi|gd|cv|se|je|bz|ni|gb_sct|gb_mon|kg|gb_eng)-.*": "block/flag-15x9",
+      "@.*-(at|am|bg|bo|de|ee|nl|lt||lu|hu|ga|ru|ye|sl)-.*": "block/flag-hor-3color",
+      "@.*-(be|ci|fr|pe|gn|td|it|ie|ng|ml|ro)-.*": "block/flag-ver-3color",
+      "@.*-(bj|mg)-.*": "block/flag-madagascar",
+      "@.*-(cr|th)-.*": "block/flag-hor-6color",
+      "@.*-(mu|co)-.*": "block/flag-hor-4color",
+      "@.*-(ne|ch|va)-.*": "block/flag-12x12",
+      "@.*-(pl|ua|id)-.*": "block/flag-hor-2color",
+      "*-af-*": "block/flag-14x10",
+      "*-lv-*": "block/flag-hor-5color",
+      "*-np-*": "block/flag-20x14"
+    },
+    "rotateYByType": {
+      "*-north": 90,
+      "*-south": -90,
+      "*-west": 180
+    }
+  },
+  "textures": {
+    "pole": { "base": "game:block/liquid/dye/gray" },
+    "12x12": { "base": "country/full/{country}-*" },
+    "14x10": { "base": "country/full/{country}-*" },
+    "15x12": { "base": "country/full/{country}-*" },
+    "15x9": { "base": "country/full/{country}-*" },
+    "16x8": { "base": "country/full/{country}-*" },
+    "20x14": { "base": "country/full/{country}-*" },
+    "hor3-1ByType": {
+      "*-am-*": { "base": "game:block/cloth/linen/red" },
+      "*-at-*": { "base": "game:block/cloth/linen/red" },
+      "*-bg-*": { "base": "game:block/cloth/linen/white" },
+      "*-de-*": { "base": "game:block/cloth/linen/black" },
+      "*-ee-*": { "base": "game:block/cloth/linen/blue", "overlays": ["game:block/slightlydarker"] },
+      "*-ga-*": { "base": "game:block/cloth/linen/green" },
+      "*-hu-*": { "base": "game:block/cloth/linen/red" },
+      "*-lt-*": { "base": "game:block/cloth/linen/yellow" },
+      "*-lu-*": { "base": "game:block/cloth/linen/red" },
+      "*-nl-*": { "base": "game:block/cloth/linen/red", "overlays": ["game:block/slightlydarker"] },
+      "*-ru-*": { "base": "game:block/cloth/linen/white" },
+      "*-sl-*": { "base": "game:block/cloth/linen/green" },
+      "*-ye-*": { "base": "game:block/cloth/linen/red" }
+    },
+    "hor3-2ByType": {
+      "*-am-*": { "base": "game:block/cloth/linen/blue" },
+      "*-at-*": { "base": "game:block/cloth/linen/white" },
+      "*-bg-*": { "base": "game:block/cloth/linen/green" },
+      "*-de-*": { "base": "game:block/cloth/linen/red" },
+      "*-ee-*": { "base": "game:block/cloth/linen/black" },
+      "*-ga-*": { "base": "game:block/cloth/linen/yellow" },
+      "*-hu-*": { "base": "game:block/cloth/linen/white" },
+      "*-lt-*": { "base": "game:block/cloth/linen/green" },
+      "*-lu-*": { "base": "game:block/cloth/linen/white" },
+      "*-nl-*": { "base": "game:block/cloth/linen/white" },
+      "*-ru-*": { "base": "game:block/cloth/linen/blue" },
+      "*-sl-*": { "base": "game:block/cloth/linen/white" },
+      "*-ye-*": { "base": "game:block/cloth/linen/white" }
+    },
+    "hor3-3ByType": {
+      "*-am-*": { "base": "game:block/cloth/linen/orange" },
+      "*-at-*": { "base": "game:block/cloth/linen/red" },
+      "*-bg-*": { "base": "game:block/cloth/linen/red" },
+      "*-de-*": { "base": "game:block/cloth/linen/yellow" },
+      "*-ee-*": { "base": "game:block/cloth/linen/white" },
+      "*-ga-*": { "base": "game:block/cloth/linen/blue" },
+      "*-hu-*": { "base": "game:block/cloth/linen/green", "overlays": ["game:block/slightlydarker"] },
+      "*-lt-*": { "base": "game:block/cloth/linen/red" },
+      "*-lu-*": { "base": "game:block/cloth/linen/blue" },
+      "*-nl-*": { "base": "game:block/cloth/linen/blue", "overlays": ["game:block/slightlydarker"] },
+      "*-ru-*": { "base": "game:block/cloth/linen/red" },
+      "*-sl-*": { "base": "game:block/cloth/linen/blue" },
+      "*-ye-*": { "base": "game:block/cloth/linen/black" }
+    },
+    "hor2-1ByType": {
+      "*-id-*": { "base": "game:block/cloth/linen/red" },
+      "*-pl-*": { "base": "game:block/cloth/linen/white" },
+      "*-ua-*": { "base": "game:block/cloth/linen/blue" }
+    },
+    "hor2-2ByType": {
+      "*-id-*": { "base": "game:block/cloth/linen/white" },
+      "*-pl-*": { "base": "game:block/cloth/linen/red" },
+      "*-ua-*": { "base": "game:block/cloth/linen/yellow" }
+    },
+    "ver3-1ByType": {
+      "*-be-*": { "base": "game:block/cloth/linen/black" },
+      "*-ci-*": { "base": "game:block/cloth/linen/orange" },
+      "*-fr-*": { "base": "game:block/cloth/linen/blue", "overlays": ["game:block/slightlydarker"] },
+      "*-gn-*": { "base": "game:block/cloth/linen/red" },
+      "*-ie-*": { "base": "game:block/cloth/linen/green" },
+      "*-it-*": { "base": "game:block/cloth/linen/green" },
+      "*-ml-*": { "base": "game:block/cloth/linen/green" },
+      "*-ng-*": { "base": "game:block/cloth/linen/green", "overlays": ["game:block/slightlydarker"] },
+      "*-pe-*": { "base": "game:block/cloth/linen/red" },
+      "*-ro-*": { "base": "game:block/cloth/linen/blue", "overlays": ["game:block/slightlydarker"] },
+      "*-td-*": { "base": "game:block/cloth/linen/blue", "overlays": ["game:block/slightlydarker"] }
+    },
+    "ver3-2ByType": {
+      "*-be-*": { "base": "game:block/cloth/linen/yellow" },
+      "*-ci-*": { "base": "game:block/cloth/linen/white" },
+      "*-fr-*": { "base": "game:block/cloth/linen/white" },
+      "*-gn-*": { "base": "game:block/cloth/linen/yellow" },
+      "*-ie-*": { "base": "game:block/cloth/linen/white" },
+      "*-it-*": { "base": "game:block/cloth/linen/white" },
+      "*-ml-*": { "base": "game:block/cloth/linen/yellow" },
+      "*-ng-*": { "base": "game:block/cloth/linen/white" },
+      "*-pe-*": { "base": "game:block/cloth/linen/white" },
+      "*-ro-*": { "base": "game:block/cloth/linen/yellow" },
+      "*-td-*": { "base": "game:block/cloth/linen/yellow" }
+    },
+    "ver3-3ByType": {
+      "*-be-*": { "base": "game:block/cloth/linen/red" },
+      "*-ci-*": { "base": "game:block/cloth/linen/green" },
+      "*-fr-*": { "base": "game:block/cloth/linen/red" },
+      "*-gn-*": { "base": "game:block/cloth/linen/green" },
+      "*-ie-*": { "base": "game:block/cloth/linen/orange" },
+      "*-it-*": { "base": "game:block/cloth/linen/red" },
+      "*-ml-*": { "base": "game:block/cloth/linen/red" },
+      "*-ng-*": { "base": "game:block/cloth/linen/green", "overlays": ["game:block/slightlydarker"] },
+      "*-pe-*": { "base": "game:block/cloth/linen/red" },
+      "*-ro-*": { "base": "game:block/cloth/linen/red" },
+      "*-td-*": { "base": "game:block/cloth/linen/red" }
+    },
+    "madagascar1ByType": {
+      "*-bj-*": { "base": "game:block/cloth/linen/green" },
+      "*-mg-*": { "base": "game:block/cloth/linen/white" }
+    },
+    "madagascar2ByType": {
+      "*-bj-*": { "base": "game:block/cloth/linen/yellow" },
+      "*-mg-*": { "base": "game:block/cloth/linen/red" }
+    },
+    "madagascar3ByType": {
+      "*-bj-*": { "base": "game:block/cloth/linen/red" },
+      "*-mg-*": { "base": "game:block/cloth/linen/green" }
+    },
+    "hor5-1ByType": { "*-lv-*": { "base": "game:block/cloth/linen/red" } },
+    "hor5-2ByType": { "*-lv-*": { "base": "game:block/cloth/linen/red" } },
+    "hor5-3ByType": { "*-lv-*": { "base": "game:block/cloth/linen/white" } },
+    "hor5-4ByType": { "*-lv-*": { "base": "game:block/cloth/linen/red" } },
+    "hor5-5ByType": { "*-lv-*": { "base": "game:block/cloth/linen/red" } },
+    "hor4-1ByType": {
+      "*-co-*": { "base": "game:block/cloth/linen/yellow" },
+      "*-mu-*": { "base": "game:block/cloth/linen/red" }
+    },
+    "hor4-2ByType": {
+      "*-co-*": { "base": "game:block/cloth/linen/yellow" },
+      "*-mu-*": { "base": "game:block/cloth/linen/blue", "overlays": ["game:block/slightlydarker"] }
+    },
+    "hor4-3ByType": {
+      "*-co-*": { "base": "game:block/cloth/linen/blue", "overlays": ["game:block/slightlydarker"] },
+      "*-mu-*": { "base": "game:block/cloth/linen/yellow" }
+    },
+    "hor4-4ByType": {
+      "*-co-*": { "base": "game:block/cloth/linen/red" },
+      "*-mu-*": { "base": "game:block/cloth/linen/green" }
+    },
+    "hor6-1ByType": {
+      "*-cr-*": { "base": "game:block/cloth/linen/blue", "overlays": ["game:block/slightlydarker"] },
+      "*-th-*": { "base": "game:block/cloth/linen/red" }
+    },
+    "hor6-2ByType": {
+      "*-cr-*": { "base": "game:block/cloth/linen/white" },
+      "*-th-*": { "base": "game:block/cloth/linen/white" }
+    },
+    "hor6-3ByType": {
+      "*-cr-*": { "base": "game:block/cloth/linen/red" },
+      "*-th-*": { "base": "game:block/cloth/linen/blue", "overlays": ["game:block/slightlydarker"] }
+    },
+    "hor6-4ByType": {
+      "*-cr-*": { "base": "game:block/cloth/linen/red" },
+      "*-th-*": { "base": "game:block/cloth/linen/blue", "overlays": ["game:block/slightlydarker"] }
+    },
+    "hor6-5ByType": {
+      "*-cr-*": { "base": "game:block/cloth/linen/white" },
+      "*-th-*": { "base": "game:block/cloth/linen/white" }
+    },
+    "hor6-6ByType": {
+      "*-cr-*": { "base": "game:block/cloth/linen/blue", "overlays": ["game:block/slightlydarker"] },
+      "*-th-*": { "base": "game:block/cloth/linen/red" }
+    }
+  },
+  "collisionBox": null,
+  "selectionBox": {
+    "x1": 0.4375,
+    "y1": 0,
+    "z1": 0,
+    "x2": 0.5625,
+    "y2": 1,
+    "z2": 1,
+    "rotateYByType": { "@.*-(east|west)": 90 }
+  },
+  "sounds": {
+    "place": "game:block/cloth",
+    "break": "game:block/cloth",
+    "hit": "game:block/cloth",
+    "walk": "game:walk/cloth"
+  },
+  "lightAbsorption": 0,
+  "resistance": 0.5,
+  "sideopaque": { "all": false },
+  "sidesolid": { "all": false },
+  "tpOffHandTransform": {
+    "translation": { "x": -1.4, "y": -1, "z": -0.93 },
+    "rotation": { "x": 0, "y": 0, "z": -90 },
+    "scale": 0.5
+  },
+  "tpHandTransform": {
+    "translation": { "x": -1.55, "y": -1, "z": -1 },
+    "rotation": { "x": 0, "y": 0, "z": -90 },
+    "scale": 0.5
+  },
+  "fpHandTransform": {
+    "rotation": { "x": 0, "y": 45, "z": 0 }
+  },
+  "guiTransform": {
+    "translation": { "x": -8, "y": 3, "z": 0 },
+    "scale": 1.4
+  },
+  "groundTransform": {
+    "translation": { "x": 0, "y": 0, "z": 0 },
+    "rotation": { "x": 0, "y": -45, "z": 0 },
+    "origin": { "x": 0.5, "y": 0, "z": 0.5 },
+    "scale": 6
+  },
+  "dropsByType": {
+    "*-ua-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 12 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 12 } }
+    ],
+    "@.*-(pl|id|gl|je)-.*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 12 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 12 } }
+    ],
+    "@.*-(ae|jo)-.*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-black", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 6 } }
+    ],
+    "*-am-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-orange", "quantity": { "avg": 8 } }
+    ],
+    "@.*-(at|bh|qa|ch|dk)-.*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 16 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 8 } }
+    ],
+    "*-be-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-black", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 8 } }
+    ],
+    "@.*-(bg|gb_wls)-.*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 8 } }
+    ],
+    "@.*-(bj|cg|gn|cm)-.*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 8 } }
+    ],
+    "*-bw-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 16 } },
+      { "type": "item", "code": "clothp-24-black", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 2 } }
+    ],
+    "*-ci-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-orange", "quantity": { "avg": 8 } }
+    ],
+    "*-co-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 12 } },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 6 } }
+    ],
+    "@.*-(cr|cz)-.*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 8 } }
+    ],
+    "*-de-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-black", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 8 } }
+    ],
+    "*-ee-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-black", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 8 } }
+    ],
+    "@.*-(fl|il)-.*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 16 } },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 8 } }
+    ],
+    "@.*-(gb_eng|ge)-.*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 16 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 8 } }
+    ],
+    "*-fr-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 8 } }
+    ],
+    "*-ga-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 8 } }
+    ],
+    "*-fo-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 16 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 4 } }
+    ],
+    "*-ax-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 16 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 4 } }
+    ],
+    "*-gg-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 16 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 4 } }
+    ],
+    ".*-(gb_sct|aq|nato|ca_qc|gr|usfws)-.*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 12 } },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 12 } }
+    ],
+    "*-gm-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 2 } }
+    ],
+    "*-gh-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-black", "quantity": { "avg": 2 } }
+    ],
+    "*-gf-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 11 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 11 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 2 } }
+    ],
+    "@.*-(ca|hk|tn|tr)-.*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 18 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 6 } }
+    ],
+    "*-al-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 18 } },
+      { "type": "item", "code": "clothp-24-black", "quantity": { "avg": 6 } }
+    ],
+    "*-ao-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 10 } },
+      { "type": "item", "code": "clothp-24-black", "quantity": { "avg": 10 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 4 } }
+    ],
+    "*-af-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-black", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 6 } }
+    ],
+    "*-ag-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-24-black", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 4 } }
+    ],
+    "*-az-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 2 } }
+    ],
+    "*-ba-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 18 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 2 } }
+    ],
+    "*-bb-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 16 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-black", "quantity": { "avg": 2 } }
+    ],
+    "*-bd-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 18 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 6 } }
+    ],
+    "*-bf-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 11 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 11 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 2 } }
+    ],
+    "*-bi-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 8 } }
+    ],
+    "*-bn-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 12 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-24-black", "quantity": { "avg": 4 } }
+    ],
+    "*-bq-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 3 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 3 } },
+      { "type": "item", "code": "clothp-24-black", "quantity": { "avg": 2 } }
+    ],
+    "*-br-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 16 } },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 3 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 1 } }
+    ],
+    "*-bs-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 16 } },
+      { "type": "item", "code": "clothp-24-black", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 4 } }
+    ],
+    "*-bt-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-orange", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 8 } }
+    ],
+    "*-by-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 14 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 7 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 3 } }
+    ],
+    "*-cc-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 16 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 7 } },
+      { "type": "item", "code": "clothp-24-brown", "quantity": { "avg": 1 } }
+    ],
+    "*-cd-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 12 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 6 } }
+    ],
+    "*-cf-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 5 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 5 } },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 4 } }
+    ],
+    "*-cl-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 12 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 9 } },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 3 } }
+    ],
+    "*-cn-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 20 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 4 } }
+    ],
+    "*-cu-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 10 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 10 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 4 } }
+    ],
+    "*-cw-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 18 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 2 } }
+    ],
+    "*-cx-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 4 } }
+    ],
+    "*-cy-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 16 } },
+      { "type": "item", "code": "clothp-24-orange", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 2 } }
+    ],
+    "*-dj-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 2 } }
+    ],
+    "*-dm-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 12 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 3 } },
+      { "type": "item", "code": "clothp-24-purple", "quantity": { "avg": 1 } }
+    ],
+    "*-do-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 2 } }
+    ],
+    "*-dz-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 10 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 10 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 4 } }
+    ],
+    "*-eg-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-black", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 2 } }
+    ],
+    "*-eh-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-black", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 6 } }
+    ],
+    "*-er-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 9 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 3 } }
+    ],
+    "*-et-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 4 } }
+    ],
+    "*-eu-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 22 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 2 } }
+    ],
+    "*-fm-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 22 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 2 } }
+    ],
+    "*-gb_mon-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-black", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 8 } }
+    ],
+    "@.*-(gb|ru|si|sk)-.*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 8 } }
+    ],
+    "*-gd-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 8 } }
+    ],
+    "*-gi-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 12 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 9 } },
+      { "type": "item", "code": "clothp-24-black", "quantity": { "avg": 2 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 1 } }
+    ],
+    "*-gq-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 6 } }
+    ],
+    "*-gt-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 16 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 7 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 1 } }
+    ],
+    "*-gw-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-black", "quantity": { "avg": 2 } }
+    ],
+    "*-gy-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-black", "quantity": { "avg": 2 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 2 } }
+    ],
+    "*-jp-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 18 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 6 } }
+    ],
+    "*-hn-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 16 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 8 } }
+    ],
+    "@.*-(hr|lu|nl|pr|th)-.*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 8 } }
+    ],
+    "@.*-(hu|it)-.*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 8 } }
+    ],
+    "*-ie-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-orange", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 8 } }
+    ],
+    "*-im-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 20 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 2 } },
+      { "type": "item", "code": "clothp-24-black", "quantity": { "avg": 1 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 1 } }
+    ],
+    "*-in-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-orange", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 2 } }
+    ],
+    "*-iq-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-black", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 2 } }
+    ],
+    "*-ir-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 10 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 6 } }
+    ],
+    "*-is-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 16 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 4 } }
+    ],
+    "*-no-*": [
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 16 } },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 4 } }
+    ],
+    "*-jm-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-black", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 8 } }
+    ],
+    "@.*-(kg|vn)-.*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 18 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 6 } }
+    ],
+    "*-kh-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 10 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 10 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 4 } }
+    ],
+    "*-ke-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-black", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 4 } }
+    ],
+    "*-ki-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 4 } }
+    ],
+    "*-km-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 4 } }
+    ],
+    "*-kn-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-black", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 4 } }
+    ],
+    "*-kp-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 12 } },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 4 } }
+    ],
+    "*-kr-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 12 } },
+      { "type": "item", "code": "clothp-24-black", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 4 } }
+    ],
+    "*-kw-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-black", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 6 } }
+    ],
+    "@.*-(kz|se)-.*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 16 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 8 } }
+    ],
+    "*-la-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 12 } },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 4 } }
+    ],
+    "*-lc-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 18 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 2 } },
+      { "type": "item", "code": "clothp-24-black", "quantity": { "avg": 2 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 2 } }
+    ],
+    "*-li-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 12 } },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-black", "quantity": { "avg": 2 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 2 } }
+    ],
+    "*-lk-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-24-orange", "quantity": { "avg": 4 } }
+    ],
+    "*-lr-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 10 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 10 } },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 4 } }
+    ],
+    "*-us-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 9 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 9 } },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 6 } }
+    ],
+    "*-ls-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 7 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 7 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 7 } },
+      { "type": "item", "code": "clothp-24-black", "quantity": { "avg": 3 } }
+    ],
+    "@.*-(lt|ml)-.*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 8 } }
+    ],
+    "@.*-(lv|to)-.*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 20 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 4 } }
+    ],
+    "*-ly-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-black", "quantity": { "avg": 10 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 2 } }
+    ],
+    "*-ma-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 18 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 6 } }
+    ],
+    "*-me-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 14 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 1 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 1 } }
+    ],
+    "*-mg-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 4 } }
+    ],
+    "*-mh-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 12 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-orange", "quantity": { "avg": 4 } }
+    ],
+    "*-mk-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 12 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 12 } }
+    ],
+    "*-mm-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 6 } }
+    ],
+    "*-mn-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 10 } },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 6 } }
+    ],
+    "*-mo-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 16 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 2 } }
+    ],
+    "*-mp-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 16 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-24-pink", "quantity": { "avg": 1 } },
+      { "type": "item", "code": "clothp-24-orange", "quantity": { "avg": 1 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 1 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 1 } }
+    ],
+    "*-mr-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 12 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 4 } }
+    ],
+    "*-mt-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 13 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 11 } }
+    ],
+    "*-mu-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 6 } }
+    ],
+    "*-mv-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 12 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 4 } }
+    ],
+    "*-mw-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 10 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-black", "quantity": { "avg": 6 } }
+    ],
+    "*-mx-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-brown", "quantity": { "avg": 1 } },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 1 } }
+    ],
+    "*-my-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 7 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 7 } },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 4 } }
+    ],
+    "*-mz-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 5 } },
+      { "type": "item", "code": "clothp-24-black", "quantity": { "avg": 5 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 5 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 3 } }
+    ],
+    "*-na-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 3 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 3 } }
+    ],
+    "*-ne-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-orange", "quantity": { "avg": 10 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 6 } }
+    ],
+    "@.*-(nf|ng)-.*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 16 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 8 } }
+    ],
+    "*-ni-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 16 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 1 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 1 } }
+    ],
+    "*-np-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 12 } },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 6 } }
+    ],
+    "*-nr-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 18 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 3 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 3 } }
+    ],
+    "*-om-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 11 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 7 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 6 } }
+    ],
+    "*-pa-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 10 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 7 } },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 7 } }
+    ],
+    "*-pe-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 16 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 5 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 1 } },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 1 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 1 } }
+    ],
+    "*-pf-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 13 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 2 } },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 1 } }
+    ],
+    "*-pg-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-black", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 4 } }
+    ],
+    "*-ph-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 4 } }
+    ],
+    "*-pk-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 12 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 12 } }
+    ],
+    "*-ps-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-black", "quantity": { "avg": 7 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 7 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 4 } }
+    ],
+    "*-pt-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 3 } },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 1 } }
+    ],
+    "*-pw-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 18 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 6 } }
+    ],
+    "*-py-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 5 } },
+      { "type": "item", "code": "clothp-24-black", "quantity": { "avg": 1 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 1 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 1 } }
+    ],
+    "@.*-(ro|td)-.*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 8 } }
+    ],
+    "*-sl-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 8 } }
+    ],
+    "*-ye-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-black", "quantity": { "avg": 8 } }
+    ],
+    "*-rs-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 2 } }
+    ],
+    "*-rw-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 11 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 7 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 6 } }
+    ],
+    "*-sa-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 18 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 6 } }
+    ],
+    "*-sb-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 9 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 9 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 3 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 3 } }
+    ],
+    "*-sc-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 4 } }
+    ],
+    "*-sd-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-black", "quantity": { "avg": 6 } }
+    ],
+    "*-sg-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 14 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 10 } }
+    ],
+    "*-sm-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 4 } }
+    ],
+    "*-sn-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 10 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 6 } }
+    ],
+    "*-so-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 20 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 4 } }
+    ],
+    "@.*-(sr|tj)-.*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 2 } }
+    ],
+    "*-ss-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-black", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 2 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 2 } }
+    ],
+    "*-st-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 10 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-24-black", "quantity": { "avg": 4 } }
+    ],
+    "*-sv-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 16 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 1 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 1 } }
+    ],
+    "*-sx-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 5 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 3 } }
+    ],
+    "*-sy-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-black", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 4 } }
+    ],
+    "*-sz-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 3 } },
+      { "type": "item", "code": "clothp-24-black", "quantity": { "avg": 3 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 3 } },
+      { "type": "item", "code": "clothp-24-gray", "quantity": { "avg": 3 } }
+    ],
+    "*-tg-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 2 } }
+    ],
+    "*-tk-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 14 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 2 } }
+    ],
+    "*-tl-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 16 } },
+      { "type": "item", "code": "clothp-24-black", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 2 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 2 } }
+    ],
+    "*-tm-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 16 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 4 } }
+    ],
+    "*-tt-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 16 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-24-black", "quantity": { "avg": 4 } }
+    ],
+    "*-tw-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 18 } },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 2 } }
+    ],
+    "*-tz-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-black", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 2 } }
+    ],
+    "*-ug-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-black", "quantity": { "avg": 7 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 7 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 2 } }
+    ],
+    "*-un-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 18 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 6 } }
+    ],
+    "*-uy-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 14 } },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-brown", "quantity": { "avg": 1 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 1 } }
+    ],
+    "*-uz-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 9 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 7 } },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 2 } }
+    ],
+    "*-va-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 10 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 10 } },
+      { "type": "item", "code": "clothp-24-gray", "quantity": { "avg": 2 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 2 } }
+    ],
+    "*-vc-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 10 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 6 } }
+    ],
+    "*-ve-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 2 } }
+    ],
+    "*-vi-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 10 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 1 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 1 } }
+    ],
+    "*-vu-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-black", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 4 } }
+    ],
+    "*-ws-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 16 } },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 2 } }
+    ],
+    "*-yu_old-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 9 } },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 1 } }
+    ],
+    "*-za-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-black", "quantity": { "avg": 2 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 2 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 2 } }
+    ],
+    "*-zm-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 14 } },
+      { "type": "item", "code": "clothp-24-orange", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 3 } },
+      { "type": "item", "code": "clothp-24-black", "quantity": { "avg": 3 } }
+    ],
+    "*-zw-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-black", "quantity": { "avg": 3 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 3 } }
+    ],
+    "*-ad-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 10 } },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 6 } }
+    ],
+    "*-ar-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 16 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 2 } }
+    ],
+    "*-as-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-24-brown", "quantity": { "avg": 2 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 2 } }
+    ],
+    "*-aw-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 16 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 2 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 1 } }
+    ],
+    "*-bo-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 5 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 1 } },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 1 } },
+      { "type": "item", "code": "clothp-24-brown", "quantity": { "avg": 1 } }
+    ],
+    "*-bz-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 10 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 5 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 3 } },
+      { "type": "item", "code": "clothp-24-brown", "quantity": { "avg": 1 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 1 } }
+    ],
+    "*-cv-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 13 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 3 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 2 } }
+    ],
+    "*-ec-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 12 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 1 } },
+      { "type": "item", "code": "clothp-24-brown", "quantity": { "avg": 1 } }
+    ],
+    "*-es-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 14 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 1 } },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 1 } },
+      { "type": "item", "code": "clothp-24-pink", "quantity": { "avg": 1 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 1 } }
+    ],
+    "*-gu-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 16 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 5 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 1 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 1 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 1 } }
+    ],
+    "*-ht-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 10 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 10 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 2 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 1 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 1 } }
+    ],
+    "*-md-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 8 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-24-brown", "quantity": { "avg": 2 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 1 } },
+      { "type": "item", "code": "clothp-24-black", "quantity": { "avg": 1 } }
+    ],
+    "*-pm-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 3 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 3 } },
+      { "type": "item", "code": "clothp-24-black", "quantity": { "avg": 2 } }
+    ],
+    "*-ai-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 16 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 2 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 2 } }
+    ],
+    "@.*-(au|ck|tf)-.*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 16 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 2 } }
+    ],
+    "*-bm-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 14 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 3 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 1 } },
+      { "type": "item", "code": "clothp-24-brown", "quantity": { "avg": 1 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 1 } }
+    ],
+    "*-fj-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 14 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 1 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 1 } }
+    ],
+    "*-fk-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 14 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 2 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 1 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 1 } }
+    ],
+    "*-ky-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 12 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 2 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 2 } }
+    ],
+    "*-ms-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 15 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 3 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 2 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 1 } },
+      { "type": "item", "code": "clothp-24-black", "quantity": { "avg": 1 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 1 } },
+      { "type": "item", "code": "clothp-24-brown", "quantity": { "avg": 1 } }
+    ],
+    "*-nu-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 18 } },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 2 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 2 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 2 } }
+    ],
+    "*-nz-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 18 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 2 } }
+    ],
+    "*-pn-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 16 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 2 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 2 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 2 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 2 } }
+    ],
+    "*-sh_hl-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 16 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 3 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 2 } },
+      { "type": "item", "code": "clothp-24-brown", "quantity": { "avg": 2 } },
+      { "type": "item", "code": "clothp-24-black", "quantity": { "avg": 1 } }
+    ],
+    "*-tc-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 13 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 3 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 3 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 2 } },
+      { "type": "item", "code": "clothp-24-pink", "quantity": { "avg": 1 } },
+      { "type": "item", "code": "clothp-24-brown", "quantity": { "avg": 1 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 1 } }
+    ],
+    "*-tv-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 14 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 6 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 2 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 2 } }
+    ],
+    "*-vg-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 13 } },
+      { "type": "item", "code": "clothp-24-yellow", "quantity": { "avg": 3 } },
+      { "type": "item", "code": "clothp-24-green", "quantity": { "avg": 3 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 3 } },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 2 } }
+    ],
+    "*-wf-*": [
+      { "type": "block", "code": "pole" },
+      { "type": "item", "code": "clothp-24-red", "quantity": { "avg": 18 } },
+      { "type": "item", "code": "clothp-24-white", "quantity": { "avg": 4 } },
+      { "type": "item", "code": "clothp-24-blue", "quantity": { "avg": 2 } }
+    ]
+  }
+}

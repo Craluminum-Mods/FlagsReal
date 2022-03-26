@@ -1,0 +1,13 @@
+[
+  {
+    "ingredientPattern": "GWO,GWO",
+    "ingredients": {
+      "O": { "type": "item", "code": "clothp-24-orange", "quantity": 4 },
+      "W": { "type": "item", "code": "clothp-24-white", "quantity": 4 },
+      "G": { "type": "item", "code": "clothp-24-green", "quantity": 4 }
+    },
+    "width": 3,
+    "height": 2,
+    "output": { "type": "block", "code": "flag-country-ie-east" }
+  }
+]

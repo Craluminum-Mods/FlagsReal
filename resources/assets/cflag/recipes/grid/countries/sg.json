@@ -1,0 +1,13 @@
+[
+  {
+    "ingredientPattern": "LRR,WWW",
+    "ingredients": {
+      "W": { "type": "item", "code": "clothp-24-white", "quantity": 4 },
+      "L": { "type": "item", "code": "clothp-24-white", "quantity": 2 },
+      "R": { "type": "item", "code": "clothp-24-red", "quantity": 5 }
+    },
+    "width": 3,
+    "height": 2,
+    "output": { "type": "block", "code": "flag-country-sg-east" }
+  }
+]

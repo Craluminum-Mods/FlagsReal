@@ -1,0 +1,14 @@
+[
+  {
+    "ingredientPattern": "WWW,WOW,LGL",
+    "ingredients": {
+      "W": { "type": "item", "code": "clothp-24-white", "quantity": 2 },
+      "L": { "type": "item", "code": "clothp-24-white", "quantity": 3 },
+      "O": { "type": "item", "code": "clothp-24-orange", "quantity": 6 },
+      "G": { "type": "item", "code": "clothp-24-green", "quantity": 2 }
+    },
+    "width": 3,
+    "height": 3,
+    "output": { "type": "block", "code": "flag-country-cy-east" }
+  }
+]

@@ -1,0 +1,13 @@
+[
+  {
+    "ingredientPattern": "Y__,_W_,__O",
+    "ingredients": {
+      "Y": { "type": "item", "code": "clothp-24-yellow", "quantity": 8 },
+      "O": { "type": "item", "code": "clothp-24-orange", "quantity": 8 },
+      "W": { "type": "item", "code": "clothp-24-white", "quantity": 8 }
+    },
+    "width": 3,
+    "height": 3,
+    "output": { "type": "block", "code": "flag-country-bt-east" }
+  }
+]

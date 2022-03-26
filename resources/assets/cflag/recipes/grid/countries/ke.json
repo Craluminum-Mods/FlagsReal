@@ -1,0 +1,14 @@
+[
+  {
+    "ingredientPattern": "BBB,RWR,GGG",
+    "ingredients": {
+      "B": { "type": "item", "code": "clothp-24-black", "quantity": 2 },
+      "R": { "type": "item", "code": "clothp-24-red", "quantity": 4 },
+      "G": { "type": "item", "code": "clothp-24-green", "quantity": 2 },
+      "W": { "type": "item", "code": "clothp-24-white", "quantity": 4 }
+    },
+    "width": 3,
+    "height": 3,
+    "output": { "type": "block", "code": "flag-country-ke-east" }
+  }
+]

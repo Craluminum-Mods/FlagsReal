@@ -1,0 +1,12 @@
+[
+  {
+    "ingredientPattern": "GGG,GWG,WGW",
+    "ingredients": {
+      "G": { "type": "item", "code": "clothp-24-green", "quantity": 3 },
+      "W": { "type": "item", "code": "clothp-24-white", "quantity": 2 }
+    },
+    "width": 3,
+    "height": 3,
+    "output": { "type": "block", "code": "flag-country-sa-east" }
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "ingredientPattern": "DRW,WBD",
+    "ingredients": {
+      "W": { "type": "item", "code": "clothp-24-white", "quantity": 6 },
+      "R": { "type": "item", "code": "clothp-24-red", "quantity": 4 },
+      "B": { "type": "item", "code": "clothp-24-blue", "quantity": 4 },
+      "D": { "type": "item", "code": "clothp-24-black", "quantity": 2 }
+    },
+    "width": 3,
+    "height": 2,
+    "output": { "type": "block", "code": "flag-country-kr-east" }
+  }
+]
